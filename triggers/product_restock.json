@@ -1,0 +1,32 @@
+{
+    "id": "61dca139c11ae92987a97bd7",
+    "name": "product_restock",
+    "type": "DATABASE",
+    "config": {
+        "operation_types": [
+            "UPDATE"
+        ],
+        "database": "back_in_stock",
+        "collection": "products_2",
+        "service_name": "mongodb-atlas",
+        "match": {
+            "numInStock": {
+                "$gt": {
+                    "$numberInt": "0"
+                }
+            }
+        },
+        "project": {},
+        "full_document": true,
+        "full_document_before_change": false,
+        "unordered": false
+    },
+    "disabled": false,
+    "event_processors": {
+        "FUNCTION": {
+            "config": {
+                "function_name": "get_guestsWaitingForRestock"
+            }
+        }
+    }
+}
