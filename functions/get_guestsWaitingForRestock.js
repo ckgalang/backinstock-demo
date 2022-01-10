@@ -7,7 +7,11 @@ exports = function(changeEvent) {
   const get_customers_pipeline = [
     {
       '$match': {
-        'productIWant': productDetails.sku
+        'productIWant': {
+          '$in': [
+            productDetails.sku
+          ]
+        }
       }
     }, {
       '$sort': {
@@ -17,9 +21,9 @@ exports = function(changeEvent) {
       '$limit': numInStock
     }
   ]
-  const collection = context.services.get("mongodb-atlas").db("back_in_stock").collection("guests");
+  const guests_collection = context.services.get("mongodb-atlas").db("back_in_stock").collection("guests_2");
   
-  guest_documents = collection.aggregate(get_customers_pipeline);
+  guest_documents = guests_collection.aggregate(get_customers_pipeline);
   list_of_guest_documents = guest_documents.toArray();
   
   list_of_guest_documents.forEach(guest => 
