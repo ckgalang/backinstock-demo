@@ -3,13 +3,6 @@
     "type": "mongodb-atlas",
     "config": {
         "clusterName": "Cluster0",
-        "namespacePreimageConfigs": [
-            {
-                "collectionName": "products_2",
-                "dbName": "back_in_stock",
-                "recordPreimages": true
-            }
-        ],
         "readPreference": "primary",
         "wireProtocolEnabled": false
     }
