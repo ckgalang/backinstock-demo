@@ -1,6 +1,13 @@
 [
     {
         "name": "get_guestsWaitingForRestock",
-        "private": true
+        "private": true,
+        "can_evaluate": {
+            "numInStock": {
+                "$gt": {
+                    "$numberInt": "0"
+                }
+            }
+        }
     }
 ]
