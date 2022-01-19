@@ -33,8 +33,8 @@ exports = function(changeEvent) {
   list_of_guest_documents.forEach(guest => {
       var guestInfo = guest.guestInfo
       console.log("No. " + guest_number + ": " + guestInfo.guest + 
-      "\n Email: " + guestInfo.email +
-      "\n ProductDesired: " + productDetails.sku + "\n") 
+      ", Email: " + guestInfo.email +
+      ", ProductDesired: " + productDetails.sku) 
       guest_number = guest_number + 1
     }
   );
