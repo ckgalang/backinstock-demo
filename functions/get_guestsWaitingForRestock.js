@@ -26,8 +26,19 @@ exports = function(changeEvent) {
   guest_documents = guests_collection.aggregate(get_customers_pipeline);
   list_of_guest_documents = guest_documents.toArray();
   
-  list_of_guest_documents.forEach(guest => 
-               console.log(guest.guestInfo.guest));
+  // list_of_guest_documents.forEach(guest => 
+  //             console.log(guest.guestInfo.guest));
+  
+  var guest_number = 1
+  list_of_guest_documents.forEach(guest => {
+      var guestInfo = guest.guestInfo
+      console.log("No. " + guest_number + ": " + guestInfo.guest + 
+      "\n Email: " + guestInfo.email +
+      "\n ProductDesired: " + productDetails.sku + "\n") 
+      guest_number = guest_number + 1
+    }
+  );
+  
   
   /*
   INPUT MESSAGING SERVICE HERE
