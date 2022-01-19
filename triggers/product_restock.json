@@ -9,7 +9,13 @@
         "database": "back_in_stock",
         "collection": "products_2",
         "service_name": "mongodb-atlas",
-        "match": {},
+        "match": {
+            "numInStock": {
+                "gt": {
+                    "$numberInt": "0"
+                }
+            }
+        },
         "project": {},
         "full_document": true,
         "full_document_before_change": false,
