@@ -1,5 +1,5 @@
 {
-    "id": "61e84f83bcbbdb032a7db1d4",
+    "id": "61e84f96a6dd823de243b29d",
     "name": "product_restock",
     "type": "DATABASE",
     "config": {
@@ -9,13 +9,7 @@
         "database": "back_in_stock",
         "collection": "products_2",
         "service_name": "mongodb-atlas",
-        "match": {
-            "numInStock": {
-                "$gt": {
-                    "$numberInt": "0"
-                }
-            }
-        },
+        "match": {},
         "project": {},
         "full_document": true,
         "full_document_before_change": false,
