@@ -10,7 +10,7 @@
         "collection": "products_2",
         "service_name": "mongodb-atlas",
         "match": {
-            "updateDescription.updatedFields.numInStock": {
+            "fullDocument.numInStock": {
                 "$gt": {
                     "$numberInt": "0"
                 }
