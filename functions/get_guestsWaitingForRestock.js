@@ -27,7 +27,7 @@ exports = function(changeEvent) {
   list_of_guest_documents = guest_documents.toArray();
   
   list_of_guest_documents.forEach(guest => 
-               console.log(guest.guest));
+               console.log(guest.guestInfo.guest));
   
   /*
   INPUT MESSAGING SERVICE HERE
