@@ -19,7 +19,8 @@
         "project": {},
         "full_document": true,
         "full_document_before_change": false,
-        "unordered": false
+        "unordered": false,
+        "skip_catchup_events": false
     },
     "disabled": false,
     "event_processors": {
